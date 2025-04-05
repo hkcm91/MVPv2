@@ -1,0 +1,79 @@
+/* Widget styles */
+.widget-container {
+    position: absolute;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.widget-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.widget-header {
+    background: #4f46e5;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.widget-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.widget-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.widget-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.widget-content {
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.widget-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.widget-placeholder i {
+    margin-bottom: 10px;
+    color: #4f46e5;
+}
+
+.active-sticker {
+    box-shadow: 0 0 0 2px #4f46e5, 0 0 10px rgba(79, 70, 229, 0.5);
+    transform: scale(1.05);
+    z-index: 60 !important;
+}

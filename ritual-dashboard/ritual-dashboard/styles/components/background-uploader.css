@@ -1,0 +1,145 @@
+/* Background manager styles */
+#background-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 90;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#background-button:hover {
+    transform: scale(1.1);
+    background: #4338ca;
+}
+
+.background-menu {
+    position: fixed;
+    right: -330px;
+    bottom: 80px;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 95;
+    transition: right 0.3s ease;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-menu.menu-visible {
+    right: 20px;
+}
+
+.background-menu-header {
+    background: #4f46e5;
+    color: white;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.background-menu-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.background-menu-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.background-menu-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.background-menu-content {
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.background-section {
+    margin-bottom: 20px;
+}
+
+.background-section h4 {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.background-upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #f3f4f6;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.background-upload-label:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+.background-upload-label i {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #6b7280;
+}
+
+.background-upload-input {
+    display: none;
+}
+
+.background-presets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.background-preset {
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-preset:hover {
+    transform: translateY(-3px);
+}
